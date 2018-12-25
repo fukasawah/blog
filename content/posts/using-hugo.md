@@ -220,6 +220,7 @@ git commit -m "Update"
 
 後は、必要に応じてリモートリポジトリを作りPushしておくと、他の端末からでもHUGOがあれば同じ環境を使うことができるようになる。
 
+
 ### おわり
 
 これでHUGO+GitHub Pagesで簡単なBlogを書くことができるようになった。
@@ -229,3 +230,33 @@ git commit -m "Update"
 - HUGO以外の完全なコード: https://github.com/fukasawah/blog
 - GitHub Pages用リポジトリ: https://github.com/fukasawah/fukasawah.github.io
 - GitHub Pages: https://fukasawah.github.io
+
+
+おまけ
+--------------------
+
+
+### 投稿に画像の貼り付けを行いたい
+
+hugoはデフォルトで`static`配下のディレクトリとファイルを、そのまま`public`に配置する模様。
+
+なので、`static/foo/image.jpg`とおいておけば、`![](/foo/image.jpg)`で表示ができるようになる。
+
+
+
+また、VSCode で [Paste Imageという拡張機能](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)を使っている場合、以下の設定を行っておくと、ファイルは`static/images/Postのファイル名/タイムスタンプ.png`、Markdownには`![](/images/ファイル名/タイムスタンプ.png)`が張り付けられるようになり、良い感じになる。（絶対パスになっているので、URLの構造に注意）
+
+設定はWorkspace毎に設定できるので、hugoを使っている環境にだけ適用したい、という事もできる。（ディレクトリのルートの`.vscode/settings.json`に書くだけ）
+
+```
+{
+    "pasteImage.path": "${projectRoot}/static/images/${currentFileNameWithoutExt}",
+    "pasteImage.insertPattern": "${imageSyntaxPrefix}/images/${currentFileNameWithoutExt}/${imageFileName}${imageSyntaxSuffix}"
+}
+```
+
+以下は画像。貼り付けのお試し。
+
+![](/images/using-hugo/2018-12-25-16-45-13.png)
+
+
