@@ -3,6 +3,11 @@ languageCode = "ja-JP"
 title = "fukasawah's blog"
 theme = "hermit"
 
+hasCJKLanguage = true
+
+#[permalinks]
+#  posts = "/:year/:month/:filename/"
+
 [Params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
