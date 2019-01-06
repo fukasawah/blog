@@ -234,7 +234,7 @@ CMD ["/usr/local/bin/a.out"]
 また、今回のように目的の場所に無い場合は、直接`ld.so`からプログラムを実行することもできます。もし`/lib64`ではなく、`/usr/local/lib`に全部配置した場合はこんな感じ。
 
 ```
-CMD ["/usr/local/lib/ld-linux-x86-64.so.2", "--inhibit-cache", "--library-path", "/usr/local/lib", "/usr/local/bin/auth_gateway", "-c", "/etc/korat/auth_gateway.conf"]
+CMD ["/usr/local/lib/ld-linux-x86-64.so.2", "--inhibit-cache", "--library-path", "/usr/local/lib", "/usr/local/bin/a.out"]
 ```
 
 
