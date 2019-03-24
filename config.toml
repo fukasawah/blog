@@ -5,6 +5,11 @@ theme = "hermit"
 
 hasCJKLanguage = true
 
+googleAnalytics = "UA-136852520-1"
+
+[author]
+  name = "fukasawah"
+
 #[permalinks]
 #  posts = "/:year/:month/:filename/"
 
