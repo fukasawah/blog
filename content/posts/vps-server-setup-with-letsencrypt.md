@@ -199,7 +199,7 @@ https://console.cloud.google.com/net-services/dns/zones
 - DNS名: 取得したドメイン名
 - DNSSEC: オン
 
-![](/images/vps-server-setup/2019-03-16-21-14-23.png)
+![](/images/vps-server-setup-with-letsencrypt/2019-03-16-21-14-23.png)
 
 作成出来たらゾーンについてネームサーバが割り当たる。ゾーンで登録したレコードの情報はこのネームサーバに設定される。
 
@@ -210,7 +210,7 @@ Google Cloud DNS Serviceでゾーンを作成した時に得られたネーム�
 
 まず、[Google Domains](https://domains.google.com/)を開き、ネームサーバを変更する。
 
-![](/images/vps-server-setup/2019-03-16-21-20-14.png)
+![](/images/vps-server-setup-with-letsencrypt/2019-03-16-21-20-14.png)
 
 この変更は最長1日ぐらいかかる。結構時間がかかった。
 
@@ -312,7 +312,7 @@ encrypting the web, EFF news, campaigns, and ways to support digital freedom.
 ```
 
 実行後、Cloud DNS上をみると、以下のようにレコードを登録していることが分かる。
-![](/images/vps-server-setup/2019-03-17-22-59-38.png)
+![](/images/vps-server-setup-with-letsencrypt/2019-03-17-22-59-38.png)
 
 うまくいくと以下のような形になる。
 
@@ -513,11 +513,11 @@ firewall-cmd --add-service=https --zone=public --permanent
 
 Chrome等のブラウザでアクセスして表示されればOK
 
-![](/images/vps-server-setup/2019-03-17-23-35-31.png)
+![](/images/vps-server-setup-with-letsencrypt/2019-03-17-23-35-31.png)
 
 SSLの妥当性もテストしてくれるサービスがあるので、これも試す。
 https://www.ssllabs.com/ssltest/
 
-![](/images/vps-server-setup/2019-03-17-23-40-44.png)
+![](/images/vps-server-setup-with-letsencrypt/2019-03-17-23-40-44.png)
 
 いいですね。
