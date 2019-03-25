@@ -1,7 +1,7 @@
 ---
 title: "Install PostgreSQL 11 on CentOS 7"
-date: 2019-03-26T03:53:23+09:00
-draft: true
+date: 2019-03-26T03:23:23+09:00
+draft: false
 featuredImg: ""
 tags: 
   - Server
