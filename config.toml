@@ -1,17 +1,18 @@
 baseURL = "https://fukasawah.github.io/"
 languageCode = "ja-JP"
-title = "fukasawah's blog"
+title = "fukasawah.github.io"
 theme = "hermit"
 
 hasCJKLanguage = true
 
 googleAnalytics = "UA-136852520-1"
+EnableGitInfo = true
 
 [author]
   name = "fukasawah"
 
-#[permalinks]
-#  posts = "/:year/:month/:filename/"
+[permalinks]
+  posts = "/:section/:year/:month/:day/:filename/"
 
 [Params]
   dateform        = "Jan 2, 2006"
@@ -22,7 +23,7 @@ googleAnalytics = "UA-136852520-1"
   # themeColor = "#494f5c"  # Theme color in meta tags.
   homeSubtitle = "I feel like to be lazy"
   #footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # gitUrl = "https://github.com/Someone/SomeRepo/commit/" # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  gitUrl = "https://github.com/fukasawah/blog/commit/" # Prefix of link to the git commit detail page. GitInfo must be enabled.
   justifyContent = false  # Set "text-align: justify" to .content, requires extended version of Hugo
   # bgImg = ""  #  Homepage background-image URL
 
