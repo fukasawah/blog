@@ -29,10 +29,11 @@ Re-type new password:
 Adding password for user testuser
 ```
 
-ただ、出来上がるファイルは誰でも読める状態になっているので、`644`から`600`に変える。
+ただ、出来上がるファイルは誰でも読める状態になっており、nginxユーザ(グループ)から読める必要があるため、`644`から`640`に変え、グループを`nginx`に変更する。
 
 ```
-sudo chmod 0600 /etc/nginx/.htpasswd
+sudo chmod 0640 /etc/nginx/.htpasswd
+sudo chown :nginx /etc/nginx/.htpasswd
 ```
 
 
