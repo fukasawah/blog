@@ -17,6 +17,7 @@ yum install httpd-tools
 ```
 
 `htpasswd`の利用法は以下のドキュメント。
+
 https://httpd.apache.org/docs/2.4/misc/password_encryptions.html
 
 
@@ -37,14 +38,17 @@ sudo chown :nginx /etc/nginx/.htpasswd
 ```
 
 
-nginx.confの設定を変える。設定のドキュメントは以下。
+最後にnginx.confの設定を変える。設定のドキュメントは以下。
 
 https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html
 
 以下をhttp,server,locationのいずれかのディレクティブに追加する。
+locationなら特定のpathなら認証不要といった事ができる。
 
 
 ```
     auth_basic           "need authenticate";
     auth_basic_user_file /etc/nginx/.htpasswd;
 ```
+
+後はnginxをreloadして反映。
