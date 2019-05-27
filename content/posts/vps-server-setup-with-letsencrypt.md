@@ -407,7 +407,7 @@ sudo crontab -e
 毎日午前3時12分に実行する。（時間はずらす）
 
 ```
-12 3 * * * docker run -it --rm --name certbot -v "/etc/letsencrypt:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" -v "/var/log/letsencrypt:/var/log/letsencrypt" certbot/dns-google renew
+12 3 * * * docker run --rm --name certbot -v "/etc/letsencrypt:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" -v "/var/log/letsencrypt:/var/log/letsencrypt" certbot/dns-google renew 
 ```
 
 
@@ -518,6 +518,10 @@ Chrome等のブラウザでアクセスして表示されればOK
 SSLの妥当性もテストしてくれるサービスがあるので、これも試す。
 https://www.ssllabs.com/ssltest/
 
-![](/images/vps-server-setup-with-letsencrypt/2019-03-17-23-40-44.png)
+![](/images/vps-server-setup-with-letsencrypt/20  19-03-17-23-40-44.png)
 
 いいですね。
+
+
+ちなみに、証明書を更新し終わったらnginxもreloadを行わないと反映されない。ので、`systemctl reload nginx`をcronに入れておくなりすると良いでしょう。
+
