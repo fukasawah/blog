@@ -518,7 +518,7 @@ Chrome等のブラウザでアクセスして表示されればOK
 SSLの妥当性もテストしてくれるサービスがあるので、これも試す。
 https://www.ssllabs.com/ssltest/
 
-![](/images/vps-server-setup-with-letsencrypt/20  19-03-17-23-40-44.png)
+![](/images/vps-server-setup-with-letsencrypt/2019-03-17-23-40-44.png)
 
 いいですね。
 
