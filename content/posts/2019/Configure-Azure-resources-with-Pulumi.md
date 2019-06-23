@@ -2,6 +2,9 @@
 title: "PulumiでAzureのリソースを構成する"
 date: 2019-06-24T00:58:49+09:00
 draft: false
+tags:
+  - Infrastracture as Code
+  - Azure
 ---
 
 [Pulumi](https://pulumi.io/)はIndrastracture as Codeを実現するソフトウェア。
