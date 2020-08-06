@@ -55,3 +55,6 @@ enableGitInfoでコミット時の情報を使う機能が機能しなかった�
 
 これ、チューニングオプションなんだから、デフォルトにするのやめてほしい。
 
+追記: 気づいたらactions-hugoのREADME.mdに書かれてた([commit](https://github.com/peaceiris/actions-hugo/commit/c55729fbd130889796da92d7859188dbbad0e32a))。これで詰まる人が減りますねえ。
+
+
