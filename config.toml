@@ -9,6 +9,9 @@ googleAnalytics = "UA-136852520-1"
 EnableGitInfo = true
 disqusShortname = "fukasawah"
 
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+
 [taxonomies]
 tag = "tags"
 
