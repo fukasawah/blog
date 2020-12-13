@@ -220,14 +220,14 @@ https://github.com/winauth/winauth
 
 「Support for time-based RFC 6238 authenticators (e.g. Google Authenticator) and HOTP counter-based authenticators」とあるので対応している
 
-exeをダウンロードしたら以下の手順で追加する。
+exeをダウンロードして起動したら以下の手順で追加する。
 
-- Add→「Microsoft Authenticator」か「Google Authenticator」を選択
+- Add→「Authenticator」を選択
 - 秘密鍵を入力する箇所があるので、秘密鍵を入力
+- Time-basedを選択する
 - 「Verify Authenticator」 をクリックして表示されるコードを確認
 
-![](./images/index/2020-12-14-00-14-54.png)
-
+![](./images/index/2020-12-14-00-26-33.png)
 
 おわり
 ---------
