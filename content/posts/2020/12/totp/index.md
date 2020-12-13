@@ -46,7 +46,7 @@ https://tools.ietf.org/html/rfc6238
 ### アプリと連携したい
 
 RFCに従いアプリを作ればいいだけではありますが、アプリを作るのは大変なので、既存のものに乗っかるほうがよいでしょう。
-有名なところでは、Google AuthenticatorやMicrosoft Authenticatorがある。
+有名なところでは、スマートフォンアプリにGoogle AuthenticatorやMicrosoft Authenticatorとかがある。WindowsであればWinAuthでも動作する。
 
 最低限、秘密鍵の入力が出来れば連携は可能。
 
@@ -207,6 +207,26 @@ python totp-example.py B3DQULIS7BASNVU2ZLYTZGU4NU7YNVF5
 
 - ユーザ: アプリに表示されたコードを入力してサービス側に送信する
 - サービス: `totp.now()`で得られたコードと、ユーザが送信したコードが一致するかを検証する
+
+
+その他
+----------
+
+### Winauth: Windows上で動作するTOTP対応アプリ
+
+スマートフォンでしか動作確認していなかったが、Windows上で確認するためのアプリが無いか探したら「Winauth」があった。
+
+https://github.com/winauth/winauth
+
+「Support for time-based RFC 6238 authenticators (e.g. Google Authenticator) and HOTP counter-based authenticators」とあるので対応している
+
+exeをダウンロードしたら以下の手順で追加する。
+
+- Add→「Microsoft Authenticator」か「Google Authenticator」を選択
+- 秘密鍵を入力する箇所があるので、秘密鍵を入力
+- 「Verify Authenticator」 をクリックして表示されるコードを確認
+
+![](./images/index/2020-12-14-00-14-54.png)
 
 
 おわり
