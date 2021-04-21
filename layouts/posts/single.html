@@ -1,4 +1,11 @@
 {{ define "head" }}
+    {{ if fileExists "static/js/app.js" -}}
+    <script src="/js/app.js"></script>
+    {{- end }}
+    {{ if fileExists "static/css/style.css" -}}
+    <link rel="stylesheet" href="/css/style.css">
+	{{- end }}
+    <style>.bg-img {background-image: url('{{.Params.featuredImg | absURL}}');}</style>
 	{{ if .Params.featuredImg -}}
 	<style>.bg-img {background-image: url('{{.Params.featuredImg | absURL}}');}</style>
 	{{- else if .Params.images -}}
