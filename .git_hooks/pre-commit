@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TIMESTAMP=$(date --iso-8601=s)
+
+git diff --cached --name-only | grep '^content/.*\.md$' | while read filepath; do
+  if [ -f "$filepath" ] && sed -i "s/^date: \"\"/date: \"$TIMESTAMP\"/g" "$filepath"; then
+    echo "rewited $filepath"
+    git add "$filepath"
+  fi
+done
