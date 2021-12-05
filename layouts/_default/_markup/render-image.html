@@ -1,6 +1,6 @@
 {{- $res := .Page.Resources.GetMatch .Destination }}
 {{- if $res }}
-    {{- $image := $res.Fit "300x300 jpg q50" }}
+    {{- $image := $res.Fit "300x300 jpg q75" }}
     {{- $imageUrl := $image.RelPermalink }}
     <figure>
     <a href="{{ .Destination | safeURL }}" target="_blank" onclick="showOverlay(event)">
