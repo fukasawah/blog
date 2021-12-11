@@ -11,10 +11,17 @@ tags:
 
 Azure AD B2CでめんどくさいID管理を丸投げできないかなと思い調べた
 
-座学
+参考資料
 ---------
 
+ドキュメント
+
 - https://docs.microsoft.com/ja-jp/azure/active-directory-b2c/
+
+読んでおくと良さそうな記事
+
+- https://jpazureid.github.io/blog/azure-active-directory/azure-ad-b2c-fundamentals/
+- https://qiita.com/Shinya-Yamaguchi/items/03321728b373a27be009
 
 
 作成準備
@@ -143,7 +150,7 @@ https://docs.microsoft.com/ja-jp/azure/active-directory-b2c/add-sign-up-and-sign
 「任意の ID プロバイダーまたは組織ディレクトリ内のアカウント (ユーザー フローを使用したユーザーの認証用)」にすること。
 このテナントしか使わないからと「この組織ディレクトリのみに含まれるアカウント」を選ぶと、通らなくなるので注意。
 
-リダイレクトURIは動作確認用アプリに合わせた値を指定する。（`https://localhost:44316/signin-oidc`とした）
+リダイレクトURIは動作確認用アプリに合わせた値を指定する。（サンプルアプリの都合から`https://localhost:44316/signin-oidc`とした）
 
 ![](images/index/2021-12-11-08-08-09.png)
 
