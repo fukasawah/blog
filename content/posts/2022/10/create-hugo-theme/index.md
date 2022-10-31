@@ -10,7 +10,9 @@ tags:
 
 Hugoのお勉強(3年振り)
 
-ちょこちょこテーマをカスタマイズして使っていたが、[このページに感化されて](https://justinjackson.ca/words.html) もっとシンプルなのが欲しいなと思った。
+今までは[Hermit](https://github.com/Track3/hermit)というシンプルなテーマを使っていた。
+
+その後、部分的にテーマをカスタマイズして使っていたが、[このページに感化されて](https://justinjackson.ca/words.html) もっとシンプルなのが欲しいなと思った。
 
 Hugoの勉強も兼ねて1から書いてみることにした。でも結局今までの振る舞いを残したかったり、細かいところにこだわり始めてしまい、シンプルじゃなくなったし、結構時間を掛けてしまった。でもおかげでだいぶ仕組みが理解できたと思う。
 
@@ -18,9 +20,7 @@ Hugoの勉強も兼ねて1から書いてみることにした。でも結局今
 
 以下は学んだ事とかをメモ。HugoとかHTML,CSSの事とか。
 
-
-学んだこと
----------
+## 学んだこと
 
 ### テンプレートを作り始める
 
@@ -65,8 +65,8 @@ hugo gen chromastyles --style=monokai > syntax.css
     counter-increment: lineno;
     display: inline-block;
     text-align: right;
-    content: counter(lineno) ": ";
-    min-width: 2em;
+    content: counter(lineno) ": "; /* お好みで */
+    min-width: 2.5em;
 }
 
 /* スクロールバーを付けたい場合 */
@@ -194,7 +194,6 @@ resources.Getで参照するときは`assets/`は不要。それは上記の理�
 
 なので開発時はminify化したくない。また2つ以上のタグを埋め込もうとすると冗長になってしまう。それをPartial Templateで書いてみる。
 
-
 ``` layouts/partials/minify-js.html
 {{- $js := resources.Get .src | resources.Minify | resources.Fingerprint "sha512" -}}
 {{- if not hugo.IsProduction -}}
@@ -267,9 +266,48 @@ Safari(iOS)だとiPhone上からでは簡単にはできず、OSの設定で切�
 なお、シンタックスハイライトも同じ要領で2つ用意して切り替えている。
 そんなわけで、取り入れてみたものの、まぁなくても良かったかなぁ、と思ったりした。
 
+### 日本語が混在した行と英語だけの行で高さが変わる
+
+**tl;dr: line-heightを明示する。**
+
+日本語と英語が混在した行があると、高さが変わってしまう時がある。
+
+以下は該当行の行間が異なる箇所があるのと、日本語でフォントサイズが変わっている例（Firefoxだと選択範囲で反転すると分かりやすい。Chromeはこうは見えない）
+
+![日本語がある行だけ行間が広めになる](images/index/2022-11-01-07-08-01.png)
+
+これについては、厳密にはline-heightを明示すればよいようだった。
+
+```css 
+html {
+  font-size: 16px;
+  line-height: 1.25; /* 追加 */
+}
+```
+
+![line-height明示で行間が一定になる](images/index/2022-11-01-07-05-27.png)
+
+なお、1.25としているが1.5でも1.0でもよい。とにかく高さがfont-sizeに対して一定であることを明示させるのが大事らしい。
+また、`html`要素に適用しているが、上記のように`code`内だけに適用したいなら`code`要素だけでもよい。
+
+### fontの選定
+
+見栄えが変だな、と思ったら英単語と日本語でフォントが違うことに気づいた。
+
+という事で以下にした。
+
+- 日本語・英語
+  - "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic
+  - "メイリオ"
+- ソースコード
+  - consolas
+
+游ゴシックはWindows,Macで微妙に名前が違うらしいので注意。
+
+consolasは日本語に対応していないらしい。気にならないので今はそのままにする。
 
 ### Lighthouseの結果をみてみた
 
 改善の余地ありですね。
 
-![](images/index/2022-11-01-00-29-20.png)
+![Lighthouseの結果](images/index/2022-11-01-00-29-20.png)
