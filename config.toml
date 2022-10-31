@@ -1,7 +1,7 @@
 baseURL = "https://fukasawah.github.io/"
 languageCode = "ja-JP"
 title = "fukasawah.github.io"
-theme = "hermit"
+theme = "fukasawah"
 
 hasCJKLanguage = true
 enableEmoji = true # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
@@ -47,14 +47,16 @@ tag = "tags"
     url = "https://github.com/fukasawah"
 
 [menu]
-
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
   [[menu.main]]
     name = "Posts"
     url = "/posts/"
-    weight = 10
-
-  [[menu.main]]
-    name = "About"
-    url = "about/"
     weight = 20
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
 
