@@ -1,0 +1,5 @@
+{{- $css := resources.Get .src | resources.Minify | resources.Fingerprint "sha512" -}}
+{{- if not hugo.IsProduction -}}
+  {{- $css = resources.Get .src | resources.Fingerprint "sha512" -}}
+{{- end -}}
+<link rel="stylesheet" type="text/css" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">

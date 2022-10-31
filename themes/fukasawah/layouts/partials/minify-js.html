@@ -1,0 +1,5 @@
+{{- $js := resources.Get .src | resources.Minify | resources.Fingerprint "sha512" -}}
+{{- if not hugo.IsProduction -}}
+  {{- $js = resources.Get .src | resources.Fingerprint "sha512" -}}
+{{- end -}}
+<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

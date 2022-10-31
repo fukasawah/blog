@@ -1,0 +1,18 @@
+{{- $res := .Page.Resources.GetMatch .Destination}}
+
+{{- if $res }}
+    {{- $image := $res.Fit "300x300 jpg q75" }}
+    {{- $imageUrl := $image.RelPermalink }}
+    <figure>
+    <a href="{{ .Destination | safeURL }}" target="_blank" onclick="showOverlay(event)">
+        <img src="{{ $imageUrl | safeURL }}" {{ with .Text}} alt="{{ . }}"{{ end }} {{ with .Title}} title="{{ . }}"{{ end }} loading="lazy"/>
+    </a>
+    {{- with .Text }}
+        <figcaption>{{ . }}</figcaption>
+    {{- end }}
+    </figure>
+{{- else }}
+    <figure>
+        <img src="{{ .Destination | safeURL }}" {{ with .Text}} alt="{{ . }}"{{ end }} {{ with .Title}} title="{{ . }}"{{ end }} loading="lazy"/>
+    </figure>
+{{- end}}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        {{.Content}}
+        <footer>
+            <p>Created at: {{ dateFormat .Site.Params.dateformNumTime .Date.Local }}
+                {{- if and .GitInfo .Site.Params.gitUrl }}
+                <br>Updated at: {{ dateFormat .Site.Params.dateformNumTime .GitInfo.AuthorDate.Local }} <a
+                    href="{{ .Site.Params.gitUrl -}}{{ .GitInfo.Hash }}" target="_blank" rel="noopener">#{{
+                    .GitInfo.AbbreviatedHash }}</a>
+                {{- end }}
+            </p>
+        </footer>
+    </article>
+</main>
+{{ end }}

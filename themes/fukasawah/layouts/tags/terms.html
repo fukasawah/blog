@@ -1,0 +1,19 @@
+
+
+{{ define "main" }}
+<main>
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        {{.Content}}
+    </article>
+    <ul>
+        {{ range .Data.Terms.ByCount }}
+            <li>
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }} posts) 
+            </li>
+        {{ end }}
+    </ul>
+</main>
+{{ end }}
