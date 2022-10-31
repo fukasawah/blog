@@ -40,12 +40,18 @@
     }
 }
 
+html {
+    font-family: "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
 body {
     background-color: var(--background-color);
     color: var(--font-color);
 }
 
-article > footer{
+article>footer {
     border-top: 1px solid var(--border-color);
 }
 
@@ -62,7 +68,11 @@ a:hover {
 }
 
 p {
-    line-height: 1.58;
+    line-height: 1.50;
+}
+
+li{
+    margin: 0.25em 0;
 }
 
 pre {
@@ -73,12 +83,16 @@ pre {
     overflow: auto;
 }
 
+code {
+    font-family: consolas;
+    font-size: 14px;
+}
+
 p>code {
     /*inline code*/
-    padding: 0.125em 0.25em;
+    padding: 0.25em;
     background-color: var(--code-background-color);
     color: var(--code-color);
-    font-family: consolas;
 }
 
 .highlight {
@@ -90,7 +104,7 @@ p>code {
     display: inline-block;
     text-align: right;
     content: counter(lineno) ": ";
-    min-width: 2em;
+    min-width: 2.5em;
 }
 
 svg {
