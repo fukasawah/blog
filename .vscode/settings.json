@@ -1,4 +1,4 @@
 {
-    "pasteImage.path": "${projectRoot}/static/images/${currentFileNameWithoutExt}",
-    "pasteImage.insertPattern": "${imageSyntaxPrefix}/images/${currentFileNameWithoutExt}/${imageFileName}${imageSyntaxSuffix}"
+    "pasteImage.path": "${currentFileDir}/images/${currentFileNameWithoutExt}",
+    "pasteImage.insertPattern": "${imageSyntaxPrefix}images/${currentFileNameWithoutExt}/${imageFileName}${imageSyntaxSuffix}",
 }

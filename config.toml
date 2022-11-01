@@ -5,7 +5,7 @@ theme = "fukasawah"
 
 hasCJKLanguage = true
 enableEmoji = true # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
-googleAnalytics = "UA-136852520-1"
+#googleAnalytics = "UA-136852520-1"
 EnableGitInfo = true
 disqusShortname = "fukasawah"
 
