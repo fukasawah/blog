@@ -1,6 +1,6 @@
 ---
 title: "Azure Functions Core Tools(v4.0.4829)でfunc start時にSystem.Net.Http.Formatting.dllが無いエラーが発生したときの対処"
-date: "2022-11-01T00:31:50+09:00"
+date: "2022-11-08T02:27:50+09:00"
 draft: false
 toc: true
 images:
@@ -27,6 +27,8 @@ tags:
 - .NET SDK: 6.0.305, 6.0.402
 - Azure Functions Core Tools: 4.0.4590, 4.0.4829
 
+
+参考までにdotnet --infoの結果
 
 <details>
 <summary>dotnet --infoの結果（事象が最後に発生したときの状態）</summary>
