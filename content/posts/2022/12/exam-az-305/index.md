@@ -10,7 +10,7 @@ tags:
 ---
 
 
-今回は[AZ-305](https://learn.microsoft.com/ja-jp/certifications/exams/az-305)受けました。[3か月ぐらい前にAZ-204を受けた](/posts/2022/09/exam-az-204/index.md)。[履歴はタグを眺めると分かるかも](/tags/mcp/)。
+今回は[AZ-305](https://learn.microsoft.com/ja-jp/certifications/exams/az-305)受けました。[3か月ぐらい前にAZ-204を受けた](/posts/2022/09/19/exam-az-204/)。[履歴はタグを眺めると分かるかも](/tags/mcp/)。
 
 結果は817点で合格でした。年内に取ろうと思っていたので受かってよかった。
 
