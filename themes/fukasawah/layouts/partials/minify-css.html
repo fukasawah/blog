@@ -2,4 +2,9 @@
 {{- if not hugo.IsProduction -}}
   {{- $css = resources.Get .src | resources.Fingerprint "sha512" -}}
 {{- end -}}
+{{- if .lazy -}}
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" type="text/css" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
+{{- else -}}
 <link rel="stylesheet" type="text/css" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end -}}

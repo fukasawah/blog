@@ -115,7 +115,9 @@ svg {
 }
 
 
-figure {}
+figure {
+    text-align: center;
+}
 
 figcaption {
     text-align: center;
@@ -123,11 +125,11 @@ figcaption {
 }
 
 figure img {
-    display: block;
     margin: 0 auto;
     padding: 0.25em;
     border: 1px solid var(--border-color);
     max-width: 100%;
+    height: auto;
 }
 
 .overlay {

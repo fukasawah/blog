@@ -1,11 +1,14 @@
 {{- $res := .Page.Resources.GetMatch .Destination}}
 
 {{- if $res }}
-    {{- $image := $res.Fit "300x300 jpg q75" }}
-    {{- $imageUrl := $image.RelPermalink }}
+    {{- $jpg := $res.Fit "300x300 jpg q80" }}
+    {{- $webp := $res.Fit "300x300 webp q80" }}
     <figure>
     <a href="{{ .Destination | safeURL }}" target="_blank" onclick="showOverlay(event)">
-        <img src="{{ $imageUrl | safeURL }}" {{ with .Text}} alt="{{ . }}"{{ end }} {{ with .Title}} title="{{ . }}"{{ end }} loading="lazy"/>
+        <picture>
+            <source type="image/webp" srcset="{{ $webp.RelPermalink | safeURL }}" width="{{ $webp.Width }}" height="{{ $webp.Height }}" />
+            <img src="{{ $jpg.RelPermalink | safeURL }}" {{ with .Text}} alt="{{ . }}"{{ end }} {{ with .Title}} title="{{ . }}"{{ end }} width="{{ $jpg.Width }}" height="{{ $jpg.Height }}" loading="lazy" />
+        </picture>
     </a>
     {{- with .Text }}
         <figcaption>{{ . }}</figcaption>
