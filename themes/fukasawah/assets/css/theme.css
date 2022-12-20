@@ -41,7 +41,7 @@
 }
 
 html {
-    font-family: "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic;
+    font-family: "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "YuGothic Medium", sans-serif;
     font-size: 16px;
     line-height: 1.25;
 }
@@ -84,7 +84,7 @@ pre {
 }
 
 code {
-    font-family: consolas;
+    font-family: consolas, monospace;
     font-size: 14px;
 }
 
