@@ -9,6 +9,11 @@ tags:
   - Debug
 ---
 
+参考
+------
+
+- https://zatta.link/web/debug-ios-safari-with-windows.html
+
 前提
 ------
 
