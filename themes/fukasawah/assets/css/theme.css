@@ -49,6 +49,9 @@ html {
 body {
     background-color: var(--background-color);
     color: var(--font-color);
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-text-size-adjust: 100%;
 }
 
 article>footer {
