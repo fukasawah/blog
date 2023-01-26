@@ -2,6 +2,7 @@
 @media (not (prefers-color-scheme: dark)) {
     :root {
         --background-color: #EEE;
+        --highlight-background-color: #CCC;
         --font-color: #333;
         --link-color: #00F;
         --link-active-color: #99F;
@@ -15,6 +16,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #333;
+        --highlight-background-color: #555;
         --font-color: #CCC;
         --link-color: #99F;
         --link-active-color: #CCF;
@@ -35,7 +37,7 @@
 /* any devices */
 @media screen and (min-width: 768px) {
     body {
-        max-width: 640px;
+        max-width: 1024px;
         margin: auto;
     }
 }
@@ -74,7 +76,7 @@ p {
     line-height: 1.50;
 }
 
-li{
+li {
     margin: 0.25em 0;
 }
 
@@ -168,4 +170,24 @@ h2 {
 h3 {
     text-decoration-line: underline;
     /* border-bottom: 1px dashed var(--border-color); */
+}
+
+h4 {
+    text-decoration-line: underline;
+    /* border-bottom: 1px dashed var(--border-color); */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #000;
+    padding: 0.5em;
+    word-break: keep-all;
+}
+
+tr:hover{
+    background-color: var(--highlight-background-color);
 }
