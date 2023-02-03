@@ -37,7 +37,7 @@
 /* any devices */
 @media screen and (min-width: 768px) {
     body {
-        max-width: 1024px;
+        max-width: 800px;
         margin: auto;
     }
 }
@@ -119,13 +119,7 @@ svg {
     vertical-align: -.125em;
 }
 
-
-figure {
-    text-align: center;
-}
-
 figcaption {
-    text-align: center;
     font-size: 80%;
 }
 
@@ -188,6 +182,6 @@ th {
     word-break: keep-all;
 }
 
-tr:hover{
+tr:hover {
     background-color: var(--highlight-background-color);
 }
