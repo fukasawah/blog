@@ -7,7 +7,7 @@ hasCJKLanguage = true
 enableEmoji = true # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
 #googleAnalytics = "UA-136852520-1"
 EnableGitInfo = true
-disqusShortname = "fukasawah"
+#disqusShortname = "fukasawah"
 
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
@@ -20,6 +20,13 @@ tag = "tags"
 
 [permalinks]
   posts = "/:section/:year/:month/:day/:filename/"
+
+[imaging]
+  [imaging.exif]
+    disableDate = true
+    disableLatLong = true
+    excludeFields = ''
+    includeFields = ''
 
 [Params]
   dateform        = "Jan 2, 2006"
